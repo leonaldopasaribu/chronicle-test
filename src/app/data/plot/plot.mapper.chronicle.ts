@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { PlotDtoChronicle } from './plot.dto.chronicle';
-import { PlotGeometryMapperChronicle } from './plot.geometry.mapper.chronicle';
-import { PlotPropertiesMapperChronicle } from './plot.properties.mapper.chronicle';
+import { PlotGeometryMapperChronicle } from './plot-geometry.mapper.chronicle';
+import { PlotPropertiesMapperChronicle } from './plot-properties.mapper.chronicle';
 
 import { PlotEntity } from 'src/app/core/entities/plot.entity';
 
