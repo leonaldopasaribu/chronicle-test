@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import {
   DASHBOARD_ABOUT_ROUTE_URL,
@@ -11,6 +11,7 @@ import {
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   imports: [RouterModule],
+  providers: [ActivatedRoute],
 })
 export class SidebarComponent {
   readonly aboutMenuRouteUrl: typeof DASHBOARD_ABOUT_ROUTE_URL;
