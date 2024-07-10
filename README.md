@@ -27,7 +27,6 @@ List any prerequisites that need to be installed.
    ```bash
    git clone https://github.com/leonaldopasaribu/chronicle-test.git
 
-
 2. NPM Install
    access to chronicle-test folder
    ```bash
