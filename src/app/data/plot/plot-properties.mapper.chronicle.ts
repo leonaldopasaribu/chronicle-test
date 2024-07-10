@@ -10,7 +10,7 @@ import { EntityMapper } from 'src/app/shared/base/mapper';
 export class PlotPropertiesMapperChronicle
   implements EntityMapper<PlotDtoChronicle, PlotPropertiesEntity>
 {
-  toEntity(dto: PlotDtoChronicle): PlotPropertiesEntity {
+  toEntity(dto: Pick<PlotDtoChronicle, 'properties'>): PlotPropertiesEntity {
     const { properties } = dto;
     return {
       cemeteryId: properties.cemetery_id,
