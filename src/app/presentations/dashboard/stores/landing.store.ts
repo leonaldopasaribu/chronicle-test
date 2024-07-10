@@ -16,7 +16,11 @@ export class LandingStore extends Store<LandingState> {
   }
 
   markAsError(): void {
-    this.setState({ isError: true });
+    this.setState({ isLoading: false, isError: true });
+  }
+
+  markAsSuccess(): void {
+    this.setState({ isLoading: false, isError: false });
   }
 
   savePlot(plots: PlotEntity[]): void {

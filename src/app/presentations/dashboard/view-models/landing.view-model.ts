@@ -58,6 +58,7 @@ export class LandingViewModel {
 
   private onFetchPlotsSuccess(plots: PlotEntity[]): void {
     this.addPlotsToMap(plots);
+    this.landingStore.markAsSuccess();
   }
 
   private onFetchPlotsError(error: HttpErrorResponse): void {
