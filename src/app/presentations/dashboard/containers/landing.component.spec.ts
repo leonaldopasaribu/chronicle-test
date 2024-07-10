@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 
 import { LandingComponent } from './landing.component';
 
@@ -11,7 +12,9 @@ describe('LandingComponent', () => {
   let landingViewModel: LandingViewModel;
 
   const landingViewModelSpy = jasmine.createSpyObj('LandingViewModel', [
+    'hideLoading',
     'initializeMap',
+    'showLoading',
   ]);
 
   beforeEach(async () => {
@@ -45,8 +48,27 @@ describe('LandingComponent', () => {
   it('should call initializeMap from LandingViewModel when component initialization', () => {
     const initializeMapSpy = landingViewModel.initializeMap as jasmine.Spy;
 
+    component.isLoading$ = of(false);
     fixture.detectChanges();
 
     expect(initializeMapSpy).toHaveBeenCalled();
+  });
+
+  it('should call hideLoading from LandingViewModel when isLoading is false', () => {
+    const hideLoadingSpy = landingViewModel.hideLoading as jasmine.Spy;
+
+    component.isLoading$ = of(false);
+    fixture.detectChanges();
+
+    expect(hideLoadingSpy).toHaveBeenCalled();
+  });
+
+  it('should call showLoading from LandingViewModel when isLoading is true', () => {
+    const showLoadingSpy = landingViewModel.showLoading as jasmine.Spy;
+
+    component.isLoading$ = of(true);
+    fixture.detectChanges();
+
+    expect(showLoadingSpy).toHaveBeenCalled();
   });
 });
