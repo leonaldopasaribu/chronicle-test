@@ -10,7 +10,7 @@ import { EntityMapper } from 'src/app/shared/base/mapper';
 export class PlotGeometryMapperChronicle
   implements EntityMapper<PlotDtoChronicle, PlotGeometryEntity>
 {
-  toEntity(dto: PlotDtoChronicle): PlotGeometryEntity {
+  toEntity(dto: Pick<PlotDtoChronicle, 'geometry'>): PlotGeometryEntity {
     const { coordinates, type } = dto.geometry;
 
     return { coordinates, type };
