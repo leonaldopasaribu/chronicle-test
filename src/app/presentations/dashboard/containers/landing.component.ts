@@ -25,6 +25,6 @@ export class LandingComponent implements OnInit {
   constructor(private landingViewModel: LandingViewModel) {}
 
   ngOnInit(): void {
-    this.landingViewModel.initMap();
+    this.landingViewModel.initializeMap();
   }
 }

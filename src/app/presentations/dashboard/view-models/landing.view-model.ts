@@ -26,7 +26,7 @@ export class LandingViewModel {
     this.selectedPlot = null;
   }
 
-  initMap(): void {
+  initializeMap(): void {
     this.map = leaflet
       .map('map')
       .setView([DEFAULT_LATITUDE, DEFAULT_LONGITUDE], DEFAULT_ZOOM_LEVEL);
