@@ -49,5 +49,6 @@ Provide instructions on how to run your project.
 - [Flowbite](https://flowbite.com/): for UI components
 - [Angular Material](https://material.angular.io/): for UI components and design elements
 - [Tailwind UI CSS](https://tailwindui.com/): for additional UI styling and components
+- [Leaflet](https://leafletjs.com/): Mapping and geospatial visualization
 
 
