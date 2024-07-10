@@ -1,0 +1,14 @@
+<div
+  class="flex h-screen w-full flex-col items-center justify-center"
+  id="CntrScreenLoading"
+>
+  <div
+    *ngFor="let item of getArrayOfNumbers(11)"
+    [class]="'LoadingContainer-' + item"
+  >
+    <div [class]="'LoadingCircle-' + item"></div>
+  </div>
+  <p *ngIf="!!message" class="absolute text-sm text-white">
+    {{ message }}
+  </p>
+</div>
