@@ -6,8 +6,8 @@
   <div class="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800">
     <ul class="space-y-2 font-medium">
       <li>
-        <button
-          [routerLink]="[dashboardMenuRouteUrl]"
+        <a
+          [routerLink]="dashboardMenuRouteUrl"
           [routerLinkActive]="'bg-gray-100  dark:bg-gray-700'"
           [routerLinkActiveOptions]="{ exact: true }"
           class="group flex w-full items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -28,11 +28,11 @@
             />
           </svg>
           <span class="ms-3">Dashboard</span>
-        </button>
+        </a>
       </li>
 
       <li>
-        <button
+        <a
           [routerLink]="[aboutMenuRouteUrl]"
           [routerLinkActive]="'bg-gray-100  dark:bg-gray-700'"
           [routerLinkActiveOptions]="{ exact: true }"
@@ -51,7 +51,7 @@
             />
           </svg>
           <span class="ms-3 whitespace-nowrap">About</span>
-        </button>
+        </a>
       </li>
     </ul>
   </div>
